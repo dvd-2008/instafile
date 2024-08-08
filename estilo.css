@@ -1,0 +1,189 @@
+/* Estilos base */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #00a2ff;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+}
+
+.beta {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+main.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estilo para la sección de subida de archivos */
+.upload-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Alineación centrada para la subida de archivos */
+}
+
+.upload-section h3 {
+    margin-bottom: 10px;
+}
+
+.link {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #00a2ff;
+    margin-bottom: 20px;
+}
+
+.drop-area {
+    border: 2px dashed #00a2ff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+.upload-icon {
+    fill: #00a2ff;
+    margin-bottom: 10px;
+}
+
+.file-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label b {
+    color: #00a2ff;
+}
+
+/* Estilo para la sección de lista de archivos */
+.file-list-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.file-link {
+    color: #00a2ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.file-link:hover {
+    text-decoration: underline;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #f8d7da;
+}
+
+.delete-button .icon {
+    stroke: #dc3545;
+    fill: none;
+}
+
+/* Media queries para hacer el diseño más responsivo */
+@media (max-width: 768px) {
+    .upload-section, .file-list-section {
+        padding: 15px;
+    }
+
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file-link {
+        margin-bottom: 10px;
+    }
+
+    .upload-icon {
+        width: 48px; /* Ajusta el tamaño del icono en pantallas pequeñas */
+        height: 48px;
+    }
+
+    .drop-area {
+        padding: 15px;
+    }
+
+    .file-label {
+        font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-section h3 {
+        font-size: 18px;
+    }
+
+    .link {
+        font-size: 1em;
+    }
+
+    .file-item {
+        padding: 5px 0;
+    }
+
+    .delete-button {
+        padding: 3px;
+    }
+
+    .upload-icon {
+        width: 32px; /* Ajusta aún más el tamaño del icono en pantallas muy pequeñas */
+        height: 32px;
+    }
+}
